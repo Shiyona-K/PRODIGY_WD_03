@@ -1,0 +1,80 @@
+body{
+    font-family: "Georgia",serif ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0f2f1;
+}
+
+.container{
+    text-align: center;
+}
+
+h1{
+    color: #2d3436;
+}
+
+#status{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #455a64;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap:20px;
+    margin-bottom: 20px;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.cell:hover{
+    background-color: #e9ecef;
+}
+
+.cell.x{
+    color: #e91e63;
+}
+.cell.o{
+    color:#00acc1;
+}
+
+#restartBtn{
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00796b;
+    color: white;
+    border:none;
+    cursor: pointer;
+}
+
+#restartBtn:hover{
+    background-color: #555;
+}
+.cell.winner {
+    background-color: #d1fae5; 
+    color: #065f46;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+@keyframes celebrate {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
