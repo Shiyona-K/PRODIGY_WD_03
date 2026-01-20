@@ -70,7 +70,7 @@ function restartGame(){
     statusText.innerText = "Player X's Turn";
     cells.forEach(cell => {
     cell.innerText = "";
-    cell.classList.remove('x','o',);
+    cell.classList.remove('x','o','winner');
 });
 }
 
